@@ -387,9 +387,9 @@
     </head>
     <body>
         <div class="center-div" id="centerDiv">
-            <img class="img-logo" src="logo.png" alt="Logo" onclick="">
+            <img class="img-logo" src="imgs/logo.png" alt="Logo" onclick="">
             <h2>Lista de Compras</h2>
-            <img class="img-logo-dir" src="logo.png" alt="Logo" onclick="">
+            <img class="img-logo-dir" src="imgs/logo.png" alt="Logo" onclick="">
             <input type="text" id="searchInput" placeholder="Pesquisar itens...">
             <label class="toggle-switch">
                 <input type="checkbox" id="toggleCheckbox">
@@ -419,7 +419,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src="removeBt.png">
+                    <img src="imgs/removeBt.png">
                 </div>
                 <div class="modal-body">
                     <p id="nomeItemM"></p>
@@ -433,7 +433,7 @@
         </div>
 
         <div id="spinner" style="display: none;">
-            <img class="logoSpin" src="logo.png">
+            <img class="logoSpin" src="imgs/logo.png">
         </div>
 
         <script> 
@@ -596,11 +596,11 @@
                         <div>
                         <input class="iteminput" id="nomeitemnovo" type="text" value="Novo Ítem"</input>
                         </div>
-                        <img class="close-button" src="closeBt.png" alt="Fechar" onclick="fecharDetalhes(-1)">
+                        <img class="close-button" src="imgs/closeBt.png" alt="Fechar" onclick="fecharDetalhes(-1)">
                         <p>Quantidade: 
                             <span id="quantidade">1</span> <span id="selectUnidades">${selectUnidades.outerHTML}</span>
-                            <img class="btqtddn" src="downBt.png" alt="Menos" onclick="diminuirQuantidade()">
-                            <img class="btqtdup" src="upBt.png" alt="Mais" onclick="aumentarQuantidade()">
+                            <img class="btqtddn" src="imgs/downBt.png" alt="Menos" onclick="diminuirQuantidade()">
+                            <img class="btqtdup" src="imgs/upBt.png" alt="Mais" onclick="aumentarQuantidade()">
                         </p>
                         <textarea id="inputMultiline" placeholder="Descrição"></textarea>
                         <button id="btSalvarNovo" onclick="salvarNovoItem()">Salvar</button>
@@ -670,7 +670,7 @@
                         detalhesItem.innerHTML = `
                             <div class="item-det">
                                 <input class="iteminput" id="nomeitem" type="text" value="${item.item}" disabled />
-                                <img class="close-button" src="closeBt.png" alt="Fechar" onclick="fecharDetalhes('${item.id}', '${item.item}', '${item.quantidade}', '${encodeURIComponent(item.desc)}')">
+                                <img class="close-button" src="imgs/closeBt.png" alt="Fechar" onclick="fecharDetalhes('${item.id}', '${item.item}', '${item.quantidade}', '${encodeURIComponent(item.desc)}')">
                                 <p>Quantidade: 
                                     <span id="quantidade">${item.quantidade}</span> ${unDesc}
                                 </p>
@@ -681,14 +681,14 @@
                         detalhesItem.innerHTML = `
                             <div class="item-det">
                                 <input class="iteminput" id="nomeitem" type="text" value="${item.item}"</input>
-                                <img class="close-button" src="closeBt.png" alt="Fechar" onclick="fecharDetalhes('${item.id}', '${item.item}', '${item.quantidade}', '${encodeURIComponent(item.desc)}')">
+                                <img class="close-button" src="imgs/closeBt.png" alt="Fechar" onclick="fecharDetalhes('${item.id}', '${item.item}', '${item.quantidade}', '${encodeURIComponent(item.desc)}')">
                                 <p>Quantidade: 
                                     <span id="quantidade">${item.quantidade}</span> ${unDesc}
-                                    <img class="btqtddn" src="downBt.png" alt="Menos" onclick="diminuirQuantidade()">
-                                    <img class="btqtdup" src="upBt.png" alt="Mais" onclick="aumentarQuantidade()">
+                                    <img class="btqtddn" src="imgs/downBt.png" alt="Menos" onclick="diminuirQuantidade()">
+                                    <img class="btqtdup" src="imgs/upBt.png" alt="Mais" onclick="aumentarQuantidade()">
                                 </p>
                                 <textarea id="inputMultiline" placeholder="Descrição">${decodeURIComponent(item.desc)}</textarea>
-                                <img class="remove-button" src="removeBt.png" alt="Remover" onclick="confirmarRemocao('${item.item}', '${item.id}')">
+                                <img class="remove-button" src="imgs/removeBt.png" alt="Remover" onclick="confirmarRemocao('${item.item}', '${item.id}')">
                             </div>
                         `;
                     }
@@ -757,9 +757,9 @@
                     <div class="item-det">
                         <div>
                         <input class="iteminput" id="nomeitemnovo" type="text" value="Novo Ítem"</input>
-                        <img class="add-button" src="add.png" alt="Adicionar" onclick="">
+                        <img class="add-button" src="imgs/add.png" alt="Adicionar" onclick="">
                         </div>
-                        <img class="close-button" src="closeBt.png" alt="Fechar" onclick="fecharDetalhes(-1)">
+                        <img class="close-button" src="imgs/closeBt.png" alt="Fechar" onclick="fecharDetalhes(-1)">
                         
                     </div>
                 `;
@@ -860,7 +860,7 @@
                         const qtdUnidStr = getUnidadeById(qtdUnid);
                         const quantidadeHtml = `<span style="color: orange;">(${quantidade} ${qtdUnidStr})</span>`;
                         if (descIte) {
-                            textoItem.innerHTML = `${originalText} ${quantidadeHtml} <img class="infoBt" src="infoBt.png" alt="Informações">`;
+                            textoItem.innerHTML = `${originalText} ${quantidadeHtml} <img class="infoBt" src="imgs/infoBt.png" alt="Informações">`;
                         } else {
                             textoItem.innerHTML = `${originalText} ${quantidadeHtml}`;
                         }
